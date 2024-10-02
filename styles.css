@@ -1,0 +1,325 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+section {
+    padding: 60px 20px;
+}
+
+/* Sessão Hero - Vídeo de fundo */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+
+    section {
+        padding: 0;
+    }
+
+    .hero-section {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Adiciona um efeito escuro sobre o vídeo */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+/* Sessão Sobre */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background-color: #fff;
+    padding: 40px 60px;
+    gap: 10%;
+}
+
+/* Responsividade para segunda sessão */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+}
+
+.content-left h1 {
+    font-size: 3rem;
+}
+
+.content-left h1,
+.content-left h2 {
+    text-align: left;
+}
+
+.content-left p {
+    font-size: 1.2rem;
+}
+
+
+.content-right video {}
+
+/* Sessão Pontos Turísticos */
+.turismo-section {
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.turismo-section aside {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.turismo-box {
+    margin: 20px;
+    flex: 1;
+}
+
+/* Responsividade para terceira sessão */
+@media (max-width: 768px) {
+    .turismo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .turismo-section aside {
+        flex-direction: column;
+    }
+
+    .turismo-box {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.turismo-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.turismo-box p {
+    margin-top: 10px;
+}
+
+/* Sessão Depoimentos */
+.depoimentos-section {
+    background-color: #ecf0f1;
+    padding: 60px;
+    text-align: center;
+}
+
+.depoimentos-section aside {
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 760px) {
+    .ultimo {
+        display: none;
+    }
+
+    .depoimentos-section {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .carousel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .depoimentos-section aside {
+        flex-direction: column;
+    }
+}
+
+/* Sessão Valores */
+.valores-section {
+    background-color: #E68A00;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.valores-section h2 {
+    color: white;
+}
+
+.pacote {
+    display: inline-block;
+    width: 50%;
+    background-color: #F4B400;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.pacote ul {
+    list-style: none;
+}
+
+/* Formulário de Contato */
+.contato-section {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+form {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+form button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2ecc71;
+}
+
+/* Responsividade para Formulário */
+@media (max-width: 768px) {
+    .valores-section, .contato-section {
+        padding: 60px 0;
+    }
+    
+    .pacote {
+        width: 70%;
+    }
+
+    .contato-section form {
+        
+    }
+
+    form {
+        width: 70%;
+    }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Nova Sessão: Conheça nosso roteiro */
+.roteiro-section {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+.roteiro-item {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.roteiro-item h3 {
+    color: #e67e22;
+}
