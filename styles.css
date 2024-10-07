@@ -18,27 +18,14 @@ p {
     line-height: 1.6;
 }
 
-section {
-    padding: 60px 20px;
-}
-
 /* Sessão Hero - Vídeo de fundo */
-.hero-section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+.hero-section {}
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
 
     section {
         padding: 0;
-    }
-
-    .hero-section {
-        height: 50vh;
-        width: 100vw;
     }
 
     .hero-section h1 {
@@ -62,11 +49,10 @@ section {
 
 .video-overlay {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
     /* Adiciona um efeito escuro sobre o vídeo */
     z-index: 1;
 }
@@ -76,8 +62,7 @@ section {
     z-index: 2;
     color: white;
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: 200px 30px;
 }
 
 .hero-content h1 {
@@ -97,14 +82,33 @@ section {
     align-items: center;
     text-align: left;
     background-color: #fff;
-    padding: 40px 60px;
+    padding: 60px;
     gap: 10%;
+}
+
+.content-section video {
+    width: 480px;
+    height: 854px;
 }
 
 /* Responsividade para segunda sessão */
 @media (max-width: 768px) {
     .content-section {
         flex-direction: column;
+        padding: 20px;
+    }
+
+    .content-section video {
+        width: 240px;
+        height: 426px;
+    }
+
+    .hero-content {
+        margin: 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
     }
 }
 
@@ -122,10 +126,13 @@ section {
 }
 
 
-.content-right video {}
+.content-right video {
+    padding: 20px;
+}
 
 /* Sessão Pontos Turísticos */
 .turismo-section {
+    padding: 60px;
     background-color: #f9f9f9;
     text-align: center;
 }
@@ -141,12 +148,16 @@ section {
     flex: 1;
 }
 
+.turismo-section video {
+    width: 360px;
+    height: 640px;
+}
+
 /* Responsividade para terceira sessão */
 @media (max-width: 768px) {
     .turismo-section {
         display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
     .turismo-section aside {
@@ -154,8 +165,16 @@ section {
     }
 
     .turismo-box {
-        width: 80%;
         margin-bottom: 20px;
+    }
+
+    .turismo-section video {
+        width: 240px;
+        height: 426px;
+    }
+
+    .content-left h1 {
+        font-size: 2rem;
     }
 }
 
@@ -194,6 +213,11 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.depoimentos-section video {
+    width: 380px;
+    height: 670px;
+}
+
 @media (max-width: 760px) {
     .ultimo {
         display: none;
@@ -218,11 +242,16 @@ section {
     .depoimentos-section aside {
         flex-direction: column;
     }
+
+    .depoimentos-section video {
+        width: 240px;
+        height: 426px;
+    }
 }
 
 /* Sessão Valores */
 .valores-section {
-    background-color: #E68A00;
+    background-color: #E76F51;
     color: white;
     padding: 60px 20px;
     text-align: center;
@@ -235,7 +264,7 @@ section {
 .pacote {
     display: inline-block;
     width: 50%;
-    background-color: #F4B400;
+    background-color: #F4A261;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -243,6 +272,8 @@ section {
 
 .pacote ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* Formulário de Contato */
@@ -256,7 +287,7 @@ form {
     display: inline-block;
     width: 50%;
     text-align: left;
-    
+
 }
 
 form input,
@@ -284,17 +315,17 @@ form button:hover {
 
 /* Responsividade para Formulário */
 @media (max-width: 768px) {
-    .valores-section, .contato-section {
+
+    .valores-section,
+    .contato-section {
         padding: 60px 0;
     }
-    
+
     .pacote {
         width: 70%;
     }
 
-    .contato-section form {
-        
-    }
+    .contato-section form {}
 
     form {
         width: 70%;
@@ -312,7 +343,7 @@ footer {
 /* Nova Sessão: Conheça nosso roteiro */
 .roteiro-section {
     background-color: #fff;
-    padding: 60px 20px;
+    padding: 60px;
 }
 
 .roteiro-item {
