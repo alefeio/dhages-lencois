@@ -62,7 +62,7 @@ p {
     z-index: 2;
     color: white;
     text-align: center;
-    margin: 200px 30px;
+    margin: 200px 60px;
 }
 
 .hero-content h1 {
@@ -91,6 +91,22 @@ p {
     height: 854px;
 }
 
+/* Sessão Frota */
+.frota-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: left;
+    background-color: #dfe4e6;
+    padding: 60px;
+    gap: 5%;
+}
+
+.frota-section video {
+    width: 360px;
+    height: 640px;
+}
+
 /* Responsividade para segunda sessão */
 @media (max-width: 768px) {
     .content-section {
@@ -99,6 +115,16 @@ p {
     }
 
     .content-section video {
+        width: 240px;
+        height: 426px;
+    }
+
+    .frota-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .frota-section video {
         width: 240px;
         height: 426px;
     }
@@ -123,6 +149,25 @@ p {
 
 .content-left p {
     font-size: 1.2rem;
+}
+
+.content-left aside {
+    display: flex;
+    align-items: center;
+}
+
+.content-left aside video {
+    width: 144px;
+    height: 256px;
+    margin: 20px;
+}
+
+.content-left aside img {
+    height: 256px;
+}
+
+.content-right video {
+    padding: 20px;
 }
 
 /* Sessão Pontos Turísticos */
@@ -153,6 +198,7 @@ p {
     .turismo-section {
         display: flex;
         flex-direction: column;
+        padding: 20px;
     }
 
     .turismo-section aside {
@@ -170,6 +216,19 @@ p {
 
     .content-left h1 {
         font-size: 2rem;
+    }
+
+    .content-left aside {
+        flex-direction: column;
+    }
+
+    .content-left aside video {
+        width: 240px;
+        height: 426px;
+    }
+
+    .content-left aside img {
+        height: auto;
     }
 }
 
@@ -221,7 +280,7 @@ p {
     .depoimentos-section {
         display: flex;
         flex-direction: column;
-        padding: 0px;
+        padding: 20px;
     }
 
     .carousel {
@@ -248,7 +307,7 @@ p {
 .valores-section {
     background-color: #E76F51;
     color: white;
-    padding: 60px 20px;
+    padding: 60px;
     text-align: center;
 }
 
@@ -275,7 +334,7 @@ p {
 .contato-section {
     background-color: #f9f9f9;
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px;
 }
 
 form {
