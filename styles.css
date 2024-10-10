@@ -7,6 +7,11 @@ body {
     color: #333;
 }
 
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
 h1,
 h2,
 h3 {
@@ -16,6 +21,11 @@ h3 {
 
 p {
     line-height: 1.6;
+}
+
+.content {
+    max-width: 1366px;
+    margin: auto;
 }
 
 /* Sessão Hero - Vídeo de fundo */
@@ -28,12 +38,13 @@ p {
         padding: 0;
     }
 
-    .hero-section h1 {
+    h1 {
         font-size: 2.5rem;
     }
 
-    .hero-section p {
+    p {
         font-size: 1.2rem;
+        text-align: justify;
     }
 }
 
@@ -62,7 +73,7 @@ p {
     z-index: 2;
     color: white;
     text-align: center;
-    margin: 200px 60px;
+    margin: 300px 60px 200px;
 }
 
 .hero-content h1 {
@@ -76,7 +87,7 @@ p {
 }
 
 /* Sessão Sobre */
-.content-section {
+.content-section aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,47 +95,51 @@ p {
     background-color: #fff;
     padding: 60px;
     gap: 10%;
+    border-radius: 50px 50px 0 0;
 }
 
-.content-section video {
+.content-section aside video {
     width: 480px;
     height: 854px;
 }
 
 /* Sessão Frota */
 .frota-section {
+    padding: 60px 0;
+}
+
+.frota-section aside {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     text-align: left;
-    background-color: #dfe4e6;
-    padding: 60px;
     gap: 5%;
 }
 
-.frota-section video {
+.frota-section aside video {
     width: 360px;
     height: 640px;
 }
 
 /* Responsividade para segunda sessão */
 @media (max-width: 768px) {
-    .content-section {
+    .content-section aside {
         flex-direction: column;
         padding: 20px;
+        border-radius: 0;
     }
 
-    .content-section video {
+    .content-section aside video {
         width: 240px;
         height: 426px;
     }
 
-    .frota-section {
+    .frota-section aside {
         flex-direction: column;
         padding: 20px;
     }
 
-    .frota-section video {
+    .frota-section aside video {
         width: 240px;
         height: 426px;
     }
@@ -159,7 +174,6 @@ p {
 .content-left aside video {
     width: 144px;
     height: 256px;
-    margin: 20px;
 }
 
 .content-left aside img {
@@ -179,12 +193,12 @@ p {
 
 .turismo-section aside {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .turismo-box {
-    margin: 20px;
+    margin: 10px;
     flex: 1;
 }
 
@@ -221,10 +235,11 @@ p {
     .content-left aside {
         flex-direction: column;
     }
-
+    
     .content-left aside video {
         width: 240px;
         height: 426px;
+        margin: 20px 0;
     }
 
     .content-left aside img {
@@ -268,8 +283,8 @@ p {
 }
 
 .depoimentos-section video {
-    width: 380px;
-    height: 670px;
+    width: 240px;
+    height: 426px;
 }
 
 @media (max-width: 760px) {
@@ -296,11 +311,6 @@ p {
     .depoimentos-section aside {
         flex-direction: column;
     }
-
-    .depoimentos-section video {
-        width: 240px;
-        height: 426px;
-    }
 }
 
 /* Sessão Valores */
@@ -311,7 +321,7 @@ p {
     text-align: center;
 }
 
-.valores-section h2 {
+.valores-section h1 {
     color: white;
 }
 
@@ -319,7 +329,7 @@ p {
     display: inline-block;
     width: 50%;
     background-color: #F4A261;
-    margin: 20px;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
 }
@@ -328,70 +338,6 @@ p {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-/* Formulário de Contato */
-.contato-section {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 60px;
-}
-
-form {
-    display: inline-block;
-    width: 50%;
-    text-align: left;
-
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-}
-
-form button {
-    background-color: #27ae60;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #2ecc71;
-}
-
-/* Responsividade para Formulário */
-@media (max-width: 768px) {
-
-    .valores-section,
-    .contato-section {
-        padding: 60px 0;
-    }
-
-    .pacote {
-        width: 70%;
-    }
-
-    .contato-section form {}
-
-    form {
-        width: 70%;
-    }
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
 }
 
 /* Nova Sessão: Conheça nosso roteiro */
@@ -407,4 +353,68 @@ footer {
 
 .roteiro-item h3 {
     color: #e67e22;
+}
+
+/* Formulário de Contato */
+.contato-section {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 60px;
+}
+
+.contato-section div {
+    margin: 60px auto;
+    width: 50%;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsividade para Formulário */
+@media (max-width: 768px) {
+    .valores-section,
+    .contato-section {
+        padding: 60px 0;
+    }
+
+    .pacote {
+        width: 70%;
+    }
+
+    .contato-section div {
+        margin: 20px auto;
+        width: 80%;
+    }
+
+    .roteiro-section {
+        padding: 20px;
+    }
 }
