@@ -27,20 +27,23 @@
 
 <body>
     <!-- Sessão 1: Vídeo de fundo e frase de impacto -->
-    <header id="hero" class="hero-section">
-        <nav>
-            <img src="assets/logo.png" alt="D'Hages Turismo">
-            <ul>
-                <li><a href="#sobre">Sobre Carolina</a></li>
-                <li><a href="#pontos-turisticos">Pontos Turísticos</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#roteiro">Roteiro</a></li>
-                <li><a href="#frota">Nossa Frota</a></li>
-                <li><a href="#valores">Valores</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+    <header class="hero-section">
+        <nav id="navbar">
+            <div>
+                <img src="assets/logo.png" id="logo" alt="D'Hages Turismo">
+                <ul id="navbar-right">
+                    <li class="mobile-none"><a href="#hero">Início</a></li>
+                    <li class="mobile-none"><a href="#sobre">Sobre os Lençóis</a></li>
+                    <li class="mobile-none"><a href="#pontos-turisticos">Pontos Turísticos</a></li>
+                    <li class="mobile-none"><a href="#depoimentos">Depoimentos</a></li>
+                    <li class="mobile-none"><a href="#roteiro">Roteiro</a></li>
+                    <li class="mobile-none"><a href="#frota">Nossa Frota</a></li>
+                    <li class="mobile-none"><a href="#valores">Valores</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
         </nav>
-        <video autoplay muted class="background-video" poster="assets/pessoas.png">
+        <video id="hero" autoplay muted class="background-video" poster="assets/pessoas.png">
             <source src="assets/pessoas.mp4" type="video/mp4">
             Seu navegador não suporta vídeos.
         </video>

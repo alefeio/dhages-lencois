@@ -1,3 +1,6 @@
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
 document.getElementById("contactForm").addEventListener("submit", function (event) {
     event.preventDefault(); // Impede o envio padrão do formulário
 
@@ -43,3 +46,15 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
         });
 });
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.backgroundColor = "#000";
+    document.getElementById("navbar").style.opacity = "0.8";
+    document.getElementById("logo").style.width = "70px";
+  } else {
+      document.getElementById("navbar").style.backgroundColor = "transparent";
+      document.getElementById("navbar").style.opacity = "1";
+      document.getElementById("logo").style.width = "150px";
+  }
+}
