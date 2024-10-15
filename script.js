@@ -45,6 +45,8 @@ document.getElementById("contactForm").addEventListener("submit", function (even
             console.error("Erro:", error); // Manipula os erros
             alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
         });
+
+        window.location.href = "https://lencois-maranhenses.dhagesturismo.com.br/obrigado.html";
 });
 
 function scrollFunction() {
