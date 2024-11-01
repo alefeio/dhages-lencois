@@ -59,3 +59,58 @@ function scrollFunction() {
         document.getElementById("logo").style.width = "150px";
     }
 }
+
+function sendMessage() {
+    const whatsappNumber = document.getElementById('whatsapp').value;
+    const textWpp = encodeURIComponent("Olá, acessei a landing page dos Lençóis Maranhenses e gostaria de informações sobre os pacotes.");
+
+    // Coleta os dados do formulário
+    const nome = "Lead WhatsApp";
+    const email = "sem@email.com";
+    const telefone = whatsappNumber;
+    const assunto = "Landing Page Lençóis Maranhenses";
+    const mensagem = "Lead clicou no botão do WhatsApp através da landing page Lençóis Maranhenses.";
+    const client = "dhagesturismo"; // Valor fixo ou variável de identificação do cliente
+
+    // Cria o objeto com os dados a serem enviados
+    const data = {
+        nome: nome,
+        email: email,
+        telefone: telefone,
+        assunto: assunto,
+        mensagem: mensagem,
+        client: client
+    };
+
+    if (whatsappNumber) {
+
+        // Envia os dados usando o método POST
+        fetch("https://api.dhagesturismo.com.br/contato", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json(); // Processa a resposta JSON
+                } else {
+                    throw new Error("Erro no envio. Tente novamente.");
+                }
+            })
+            .then(data => {
+                console.log("Sucesso:", data); // Manipula a resposta de sucesso
+                // alert("Mensagem enviada com sucesso!");
+
+                const url = `https://wa.me/5591981149800?text=${textWpp}`;
+                window.open(url, '_blank');
+            })
+            .catch(error => {
+                console.error("Erro:", error); // Manipula os erros
+                alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+            });
+    } else {
+        alert("Por favor, insira um número de WhatsApp.");
+    }
+}
