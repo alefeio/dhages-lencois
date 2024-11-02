@@ -62,10 +62,11 @@ function scrollFunction() {
 
 function sendMessage() {
     const whatsappNumber = document.getElementById('whatsapp').value;
+    const nomeInput = document.getElementById("nome").value;
     const textWpp = encodeURIComponent("Olá, acessei a landing page dos Lençóis Maranhenses e gostaria de informações sobre os pacotes.");
 
     // Coleta os dados do formulário
-    const nome = "Lead WhatsApp";
+    const nome = nomeInput;
     const email = "sem@email.com";
     const telefone = whatsappNumber;
     const assunto = "Landing Page Lençóis Maranhenses";
@@ -82,7 +83,7 @@ function sendMessage() {
         client: client
     };
 
-    if (whatsappNumber) {
+    if (whatsappNumber && nomeInput) {
 
         // Envia os dados usando o método POST
         fetch("https://api.dhagesturismo.com.br/contato", {
@@ -111,6 +112,18 @@ function sendMessage() {
                 alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
             });
     } else {
-        alert("Por favor, insira um número de WhatsApp.");
+        alert("Por favor, insira seu nome e um número de WhatsApp.");
+    }
+}
+
+function verificarWhatsApp() {
+    const whatsappInput = document.getElementById("whatsapp");
+    const nomeInput = document.getElementById("nome");
+
+    // Verifica se o campo "whatsapp" está preenchido
+    if (whatsappInput.value.trim() !== "") {
+        nomeInput.style.display = "inline";  // Mostra o campo "nome"
+    } else {
+        nomeInput.style.display = "none";  // Esconde o campo "nome" caso "whatsapp" esteja vazio
     }
 }
