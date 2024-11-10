@@ -118,12 +118,12 @@ function sendMessage() {
 
 function verificarWhatsApp() {
     const whatsappInput = document.getElementById("whatsapp");
-    const nomeInput = document.getElementById("nome");
+    const nomeInput = document.getElementById("nomeZap");
 
     // Verifica se o campo "whatsapp" está preenchido
     if (whatsappInput.value.trim() !== "") {
         nomeInput.style.display = "inline";  // Mostra o campo "nome"
     } else {
-        nomeInput.style.display = "none";  // Esconde o campo "nome" caso "whatsapp" esteja vazio
+        nomeInput.style.display = "nomeZap";  // Esconde o campo "nome" caso "whatsapp" esteja vazio
     }
 }
