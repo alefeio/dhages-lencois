@@ -62,7 +62,7 @@ function scrollFunction() {
 
 function sendMessage() {
     const whatsappNumber = document.getElementById('whatsapp').value;
-    const nomeInput = document.getElementById("nome").value;
+    const nomeInput = document.getElementById("nomeZap").value;
     const textWpp = encodeURIComponent("Olá, acessei a landing page dos Lençóis Maranhenses e gostaria de informações sobre os pacotes.");
 
     // Coleta os dados do formulário
@@ -124,6 +124,6 @@ function verificarWhatsApp() {
     if (whatsappInput.value.trim() !== "") {
         nomeInput.style.display = "inline";  // Mostra o campo "nome"
     } else {
-        nomeInput.style.display = "nomeZap";  // Esconde o campo "nome" caso "whatsapp" esteja vazio
+        nomeInput.style.display = "none";  // Esconde o campo "nome" caso "whatsapp" esteja vazio
     }
 }
